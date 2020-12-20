@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.tencent.bugly.crashreport.CrashReport;
 
@@ -37,6 +38,8 @@ public class MyApplication extends Application {
         handler = new Handler();
         mainThreadId = android.os.Process.myTid();
         mThreadPool = ThreadManager.getThreadPool();
+
+        Log.d("Test", "onCreate: Test");
 
         initBugly();
 
